@@ -8,4 +8,5 @@ not_had_bday = True if input("Have you had your birthday yet? (y/n) ") == 'n' el
 # calculate birthyear considering whether they've had their birthday or not
 birthyear = date.today().year - age - not_had_bday
 
+# message to user
 print(f"Hi {name}, you are {age} years old, you were born in {birthyear}. You've been alive for a minimum of {age*365*24} hours")
