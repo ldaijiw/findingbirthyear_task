@@ -1,7 +1,7 @@
-
 import datetime
 from datetime import date
 from evaluate_bday import has_bday_passed
+
 # gathering user data
 name = input("What is your name?\n").title()
 age = int(input("How old are you?\n"))
@@ -27,13 +27,10 @@ elif not reveal_bday:
 # calculate birthyear and birthdate considering whether they've had their birthday or not
 birthyear = date.today().year - age - not_had_bday
 
-
 # message to user
-
 if reveal_bday:
-
     birthdate = datetime.datetime(birthyear, birthday["month"], birthday["day"])
-    timediff_h = (datetime.datetime.now() - birthdate).total_seconds() / 3600
+    timediff_h = (datetime.datetime.now() - birthdate).total_seconds() // 3600
     
     print(f"Hi {name}, you are {age} years old, you were born in {birthyear}. You've been alive for around {timediff_h} hours")
 
